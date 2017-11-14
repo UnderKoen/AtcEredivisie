@@ -10,3 +10,32 @@ body {
     max-width: 75%;
     margin: 150px auto auto;
 }
+
+footer {
+    height: 38px;
+    background-color: #C2185B;
+}
+
+footer span {
+    color: white;
+    background-color: #C2185B;
+    padding: 10px 50px;
+}
+
+footer span.left {
+    float: left;
+    text-align: left;
+}
+
+footer span.left::after {
+    content: "123test";
+}
+
+footer span.right {
+    float: right;
+    text-align: right;
+}
+
+footer span.right::after {
+    content: "Jasper majoor, Koen van Staveren";
+}
