@@ -1,19 +1,27 @@
 html {
-    #cursor: url(img/cursor.png) 8 8, auto;
+    #cursor: url(../img/cursor.png) 8 8, auto;
+    height: 100%;
 }
 
 body {
-    margin: 0px;
+    height: 100%;
+    margin: 0;
 }
 
-.rules {
-    max-width: 75%;
-    margin: 150px auto auto;
+main {
+    min-height: 100%;
+    margin-bottom: -38px;
 }
 
 footer {
+    box-shadow: black 0px 1px 10px;
     height: 38px;
     background-color: #C2185B;
+}
+
+footer span a {
+    color: white;
+    text-decoration: none;
 }
 
 footer span {
@@ -27,15 +35,7 @@ footer span.left {
     text-align: left;
 }
 
-footer span.left::after {
-    content: "123test";
-}
-
 footer span.right {
     float: right;
     text-align: right;
-}
-
-footer span.right::after {
-    content: "Jasper majoor, Koen van Staveren";
 }

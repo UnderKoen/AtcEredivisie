@@ -9,30 +9,26 @@
 
 .top h1 {
     color: white;
-    opacity: 0.75;
 }
 
-.top ul {
+.top .menu {
     list-style-type: none;
     padding: 0px;
-    margin-left: 30px;
-}
-
-.top li {
-    float: left;
+    margin-left: 50px;
     display: inline-block;
+    box-shadow: black 0px 0px 50px 5px;
 }
 
-.top li a {
+.top .menu a {
+    margin-left: -5px;
     background-color: #fa5788;
-    #box-shadow: black 0px 1px 2px;
     text-decoration: none;
     color: black;
     font-weight: bold;
     padding: 13px 25px 13px;
 }
 
-.top li a:hover {
+.top .menu a:hover, .top .menu a.current {
     padding-bottom: 10px;
-    border-bottom: solid #512DA8 3px;
+    border-bottom: solid #7E57C2 3px;
 }
