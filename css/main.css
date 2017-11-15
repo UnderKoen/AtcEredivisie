@@ -1,5 +1,5 @@
 html {
-    #cursor: url(../img/cursor.png) 8 8, auto;
+    cursor: url(../img/cursor.png) 8 8, auto;
     height: 100%;
 }
 
@@ -16,7 +16,7 @@ main {
 footer {
     box-shadow: black 0px 1px 10px;
     height: 38px;
-    background-color: #C2185B;
+    background-color: #880E4F;
 }
 
 footer span a {
@@ -26,7 +26,6 @@ footer span a {
 
 footer span {
     color: white;
-    background-color: #C2185B;
     padding: 10px 50px;
 }
 

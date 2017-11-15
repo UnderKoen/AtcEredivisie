@@ -1,5 +1,5 @@
 .top {
-    background-color: #C2185B;
+    background-color: #880E4F;
     position: fixed;
     width: 100%;
     padding-left: 50px;
@@ -21,7 +21,7 @@
 
 .top .menu a {
     margin-left: -5px;
-    background-color: #fa5788;
+    background-color: #AD1457;
     text-decoration: none;
     color: black;
     font-weight: bold;
