@@ -1,20 +1,51 @@
 html {
     cursor: url(../img/cursor.png) 8 8, auto;
     height: 100%;
+    background-color: #BDBDBD;
 }
 
 body {
-    height: 100%;
+    height: calc(100vh - 63px);
     margin: 0;
 }
 
 main {
-    min-height: 100%;
-    margin-bottom: -38px;
+    min-height: calc(100vh - 63px);
+}
+
+main .spacing {
+    display: block;
+    min-height: 150px;
+}
+
+section {
+    background-color: #E0E0E0;
+    width: 75%;
+    box-shadow: black 0px 0px 25px 4px;
+    min-height: 250px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+section:last-of-type {
+    margin-bottom: 0px;
+}
+
+section h1 {
+    color: white;
+    text-align: center;
+    padding: 10px;
+    background-color: #880E4F;
+    box-shadow: black 0px 3px 15px 0px;
+}
+
+section article {
+
 }
 
 footer {
-    box-shadow: black 0px 1px 10px;
+    margin-top: 25px;
+    box-shadow: black 0px 1px 25px;
     height: 38px;
     background-color: #880E4F;
 }

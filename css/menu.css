@@ -3,7 +3,7 @@
     position: fixed;
     width: 100%;
     padding-left: 50px;
-    box-shadow: black 0px 1px 10px;
+    box-shadow: black 0px 1px 20px;
     top: 0px;
 }
 
@@ -30,5 +30,5 @@
 
 .top .menu a:hover, .top .menu a.current {
     padding-bottom: 10px;
-    border-bottom: solid #7E57C2 3px;
+    border-bottom: solid #311B92 3px;
 }
