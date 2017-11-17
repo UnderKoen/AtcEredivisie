@@ -1,5 +1,5 @@
 html {
-    cursor: url(../img/cursor.png) 8 8, auto;
+    #cursor: url(../img/cursor.png) 8 8, auto;
     height: 100%;
     background-color: #BDBDBD;
 }
@@ -21,10 +21,9 @@ main .spacing {
 section {
     background-color: #E0E0E0;
     width: 75%;
-    box-shadow: black 0 0 25px 4px;
+    box-shadow: black 0 0 50px 4px;
     min-height: 250px;
-    margin: auto;
-    margin-bottom: 50px;
+    margin: auto auto 50px;
 }
 
 section:last-of-type {
@@ -46,6 +45,52 @@ section h2 {
     background-color: #AD1457;
     box-shadow: black 0 3px 10px 0;
 }
+
+/*Beginning popup img*/
+
+.popup img {
+    width: 250px;
+}
+
+.popup .popup-full .popup-img {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(97, 97, 97, 0.75);
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.popup .popup-full .popup-img img {
+    width: auto;
+    display: block;
+    max-width: 70vw;
+    max-height: 90vh;
+    margin: 5vh auto auto;
+}
+
+.popup .popup-full .close {
+    top: 2.5vh;
+    right: 10vw;
+    position: fixed;
+    background-color: #BDBDBD;
+    border: solid #BDBDBD 1px;
+    border-radius: 10px;
+    z-index: 1000;
+    visibility: hidden;
+}
+
+.popup img:active ~ .popup-full .popup-img, .popup img:active ~ .popup-full .close,
+.popup .popup-full .popup-img:hover, .popup .popup-full .close:hover:not(:active) ~ .popup-img, . popup .popup-full:hover .close {
+    visibility: visible;
+}
+
+.popup .popup-full .close:active {
+    visibility: hidden !important;
+}
+
+/*Ending popup img*/
 
 section article {
     padding: 0 25px 10px;
