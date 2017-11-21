@@ -1,10 +1,11 @@
 .top {
-    background-color: #880E4F;
+    background-color: #78002E;
     position: fixed;
     width: 100%;
     padding-left: 50px;
-    box-shadow: black 0px 1px 20px;
-    top: 0px;
+    top: 0;
+    z-index: 100;
+    padding-bottom: 22px;
 }
 
 .top h1 {
@@ -13,19 +14,19 @@
 
 .top .menu {
     list-style-type: none;
-    padding: 0px;
-    margin-left: 50px;
-    display: inline-block;
-    box-shadow: black 0px 0px 50px 5px;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    box-shadow: black 0 1px 20px;
+    background-color: #AD1457;
 }
 
 .top .menu a {
-    margin-left: -5px;
     background-color: #AD1457;
     text-decoration: none;
     color: white;
     font-weight: bold;
-    padding: 13px 25px 13px;
+    padding: 13px 3vw 13px;
 }
 
 .top .menu a:hover, .top .menu a.current {
