@@ -2,6 +2,7 @@ html {
     #cursor: url(../img/cursor.png) 8 8, auto;
     height: 100%;
     background-color: #BDBDBD;
+    font-family: Roboto;
 }
 
 body {
