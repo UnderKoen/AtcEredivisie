@@ -172,3 +172,15 @@ footer span.right {
     float: right;
     text-align: right;
 }
+
+section article.teams {
+    background-color: #E0E0E0;
+    margin-left: 25px;
+    margin-right: 25px;
+    box-shadow: none;
+}
+
+img.teams {
+    align-content: center;
+    width: 120px;
+}
