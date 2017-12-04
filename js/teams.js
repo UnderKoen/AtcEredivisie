@@ -1,6 +1,6 @@
 var lastRow = null;
 
-function addTeam(position, name, aanvoerder, klas, coach, imgUrl) {
+function addTeam(position, name, aanvoerder, klas, coach, punten, imgUrl) {
     var teamList = document.getElementsByClassName("teamsList")[0];
 
     var table;
@@ -56,7 +56,7 @@ function addTeam(position, name, aanvoerder, klas, coach, imgUrl) {
     aanvoerderItem.appendChild(itemImg);
 
     var aanvoerderNode = document.createElement("span");
-    aanvoerderNode.innerHTML = aanvoerder;
+    aanvoerderNode.innerHTML = "Aanvoerder: " + aanvoerder;
     aanvoerderItem.appendChild(aanvoerderNode);
 
     itemImg = document.createElement("img");
@@ -68,7 +68,7 @@ function addTeam(position, name, aanvoerder, klas, coach, imgUrl) {
     klasItem.appendChild(itemImg);
 
     var klasNode = document.createElement("span");
-    klasNode.innerHTML = klas;
+    klasNode.innerHTML = "Klas: " + klas;
     klasItem.appendChild(klasNode);
 
     itemImg = document.createElement("img");
@@ -80,12 +80,28 @@ function addTeam(position, name, aanvoerder, klas, coach, imgUrl) {
     coachItem.appendChild(itemImg);
 
     var coachNode = document.createElement("span");
-    coachNode.innerHTML = coach;
+    if (coach !== "") {
+        coachNode.innerHTML = "Coach: " + coach;
+    } else {
+        coachNode.innerHTML = "Coach: -";
+    }
     coachItem.appendChild(coachNode);
+
+    itemImg = document.createElement("img");
+    itemImg.src = "img/list-ball.png";
+
+    var puntenItem = document.createElement("span");
+    puntenItem.className = "item";
+    list.appendChild(puntenItem);
+    puntenItem.appendChild(itemImg);
+
+    var puntenNode = document.createElement("span");
+    puntenNode.innerHTML = "Punten: " + punten;
+    puntenItem.appendChild(puntenNode);
 
     if (islast) {
         lastRow = null;
-    } else  {
+    } else {
         tbody.appendChild(lastRow);
     }
 }
@@ -94,7 +110,7 @@ function hasChildClass(node, className) {
     var childs = node.childNodes;
     for (var i = 0; i < childs.length; i++) {
         var child = childs[i];
-        if  (child.classList.contains(className)) return true;
+        if (child.classList.contains(className)) return true;
     }
     return false;
 }
@@ -103,7 +119,7 @@ function hasChildNode(node, nodeName) {
     var childs = node.childNodes;
     for (var i = 0; i < childs.length; i++) {
         var child = childs[i];
-        if  (child.nodeName.toLocaleLowerCase() === nodeName.toLowerCase()) return true;
+        if (child.nodeName.toLocaleLowerCase() === nodeName.toLowerCase()) return true;
     }
     return false;
 }

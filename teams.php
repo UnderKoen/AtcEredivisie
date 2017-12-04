@@ -22,6 +22,7 @@
 
             section.teams article .content {
                 position: relative;
+                height: 175px;
             }
 
             .list {
@@ -71,7 +72,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM Teams ORDER BY position";
+$sql = "SELECT * FROM Scores JOIN Teams ON Teams.nummer=Scores.teamNummer ORDER BY Teams.position";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -82,8 +83,9 @@ if ($result->num_rows > 0) {
         $aanvoerder = $row["aanvoerder"];
         $klas = $row["klas"];
         $coach = $row["coach"];
+        $punten = $row["punten"];
         $img = $row["img"];
-        echo "<script>addTeam($pos, \"$naam\", \"$aanvoerder\", \"$klas\", \"$coach\", \"$img\")</script>";
+        echo "<script>addTeam($pos, \"$naam\", \"$aanvoerder\", \"$klas\", \"$coach\", $punten, \"$img\")</script>";
     }
 } else {
     echo "0 results";
