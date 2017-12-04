@@ -1,6 +1,6 @@
 function nextSlideShow(t) {
     var items = t.parentElement.getElementsByClassName("items")[0].getElementsByClassName("item");
-    for (i = 0; i < items.length; i++) {
+    for (var i = 0; i < items.length; i++) {
         var element = items[i];
         if (element.classList.contains("active")) {
             i = i + 1;
@@ -15,7 +15,7 @@ function nextSlideShow(t) {
 
 function previousSlideShow(t) {
     var items = t.parentElement.getElementsByClassName("items")[0].getElementsByClassName("item");
-    for (i = 0; i < items.length; i++) {
+    for (var i = 0; i < items.length; i++) {
         var element = items[i];
         if (element.classList.contains("active")) {
             i = i - 1;
