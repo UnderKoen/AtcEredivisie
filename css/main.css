@@ -215,22 +215,22 @@ footer {
     background-color: #78002e;
 }
 
-footer span a {
+footer aside a {
     color: white;
     text-decoration: none;
 }
 
-footer span {
+footer aside {
     color: white;
     padding: 10px 50px;
 }
 
-footer span.left {
+footer aside.left {
     float: left;
     text-align: left;
 }
 
-footer span.right {
+footer aside.right {
     float: right;
     text-align: right;
 }

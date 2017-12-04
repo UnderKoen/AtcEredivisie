@@ -17,7 +17,7 @@
 
             img.logo {
                 max-width: 20%;
-                padding: 10px;
+                padding: 20px;
             }
 
             section.teams article .content {
@@ -39,7 +39,7 @@
             <div class="menu">
                 <a href="home.html">Home</a>
                 <a class="current" href="teams.php">Teams</a>
-                <a href="results.html">Resultaten</a>
+                <a href="results.php">Resultaten</a>
             </div>
         </header>
         <main>
@@ -53,15 +53,15 @@
             </section>
         </main>
         <footer>
-            <span class="left">© Copyright 2017 test123</span>
-            <span class="right">Made by: Jaspor Majoor, <a href="https://underkoen.nl/">Koen van Staveren</a></span>
+            <aside class="left">© Copyright 2017 test123</aside>
+            <aside class="right">Made by: Jaspor Majoor, <a href="https://underkoen.nl/">Koen van Staveren</a></aside>
         </footer>
     </body>
 </html>
 <?php
 $servername = "underkoen.nl:3306";
-$username = "u22301p18105_readonly";
-$password = "0Lvv7pPzxZ";
+$username = "u22301p18105_test";
+$password = "test123";
 $dbname = "u22301p18105_atcEredivisie";
 
 // Create connection
@@ -72,13 +72,18 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM Scores JOIN Teams ON Teams.nummer=Scores.teamNummer ORDER BY Teams.position";
+$sql = "
+    SELECT Teams.naam, Teams.aanvoerder, Teams.klas, Teams.coach, Scores.punten, Teams.img
+    FROM Scores
+      JOIN Teams ON Teams.nummer = Scores.teamNummer
+    ORDER BY -Scores.punten, -Scores.doelsaldo";
 $result = $conn->query($sql);
 
+$pos = 0;
 if ($result->num_rows > 0) {
     // output data of each row
     while ($row = $result->fetch_assoc()) {
-        $pos = $row["position"];
+        $pos = $pos+1;
         $naam = $row["naam"];
         $aanvoerder = $row["aanvoerder"];
         $klas = $row["klas"];
@@ -87,8 +92,6 @@ if ($result->num_rows > 0) {
         $img = $row["img"];
         echo "<script>addTeam($pos, \"$naam\", \"$aanvoerder\", \"$klas\", \"$coach\", $punten, \"$img\")</script>";
     }
-} else {
-    echo "0 results";
 }
 $conn->close();
 ?>
