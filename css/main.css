@@ -45,6 +45,7 @@ section h1 {
 }
 
 section article {
+    min-height: 100px;
     background-color: #EEEEEE;
     margin-left: 25px;
     margin-right: 25px;
@@ -63,12 +64,24 @@ section article h2 {
 .list .item img {
     display: block;
     position: absolute;
-    border-right: solid #EEEEEE 8px;
-    border-bottom: solid #EEEEEE 2px;
-    border-top: solid #EEEEEE 2px;
+    border-right: solid white 8px;
+    border-bottom: solid white 2px;
+    border-top: solid white 2px;
     border-radius: 100px;
     margin-left: 8px;
     margin-top: -2px;
+}
+
+section .list .item img {
+    border-right: solid #E0E0E0 8px;
+    border-bottom: solid #E0E0E0 2px;
+    border-top: solid #E0E0E0 2px;
+}
+
+article .list .item img {
+    border-right: solid #EEEEEE 8px;
+    border-bottom: solid #EEEEEE 2px;
+    border-top: solid #EEEEEE 2px;
 }
 
 .list .item {
@@ -95,6 +108,7 @@ section article h2 {
     background-color: #616161;
     #background-color: #311b92;
 }
+
 /*Ending list*/
 
 /*Beginning slideshow*/
@@ -140,6 +154,7 @@ section article h2 {
     visibility: visible;
     display: block;
 }
+
 /*Ending slideshow*/
 
 /*Beginning popup img*/
@@ -187,8 +202,10 @@ section article h2 {
 .popup .popup-full .close:active {
     visibility: hidden !important;
 }
+
 /*Ending popup img*/
 
+/*Beginning footer*/
 footer {
     margin-top: 25px;
     box-shadow: black 0 1px 25px;
@@ -216,14 +233,4 @@ footer span.right {
     text-align: right;
 }
 
-section article.teams {
-    background-color: #E0E0E0;
-    margin-left: 25px;
-    margin-right: 25px;
-    box-shadow: none;
-}
-
-img.teams {
-    align-content: center;
-    width: 120px;
-}
+/*Ending footer*/
