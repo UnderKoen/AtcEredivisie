@@ -27,3 +27,15 @@ function previousSlideShow(t) {
         }
     }
 }
+
+function startSlideShow() {
+    var t = document.getElementsByClassName("next");
+    for (var i = 0; i < t.length; i++) {
+        var e = i;
+        setInterval(function () {
+            nextSlideShow(t[e])
+        }, 10000);
+    }
+}
+
+window.setTimeout(startSlideShow, 100);
