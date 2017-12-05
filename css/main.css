@@ -1,5 +1,4 @@
 html {
-    #cursor: url(../img/cursor.png) 8 8, auto;
     height: 100%;
     background-color: #BDBDBD;
     font-family: Roboto, serif;
@@ -97,7 +96,6 @@ article .list .item img {
     margin: auto auto auto 40px;
     height: 32px;
     background-color: #8e8e8e;
-    #background-color: #6746c3;
     color: white;
     font-weight: bold;
     font-size: 14px;
@@ -106,7 +104,6 @@ article .list .item img {
 
 .list .item:nth-child(2n) span {
     background-color: #616161;
-    #background-color: #311b92;
 }
 
 /*Ending list*/

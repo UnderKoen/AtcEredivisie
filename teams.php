@@ -52,44 +52,44 @@
                         <div class="items">
                             <div class="item active">
                                 <div class="popup">
-                                    <img src="img/Borussia%20Dortmund%20kopie.jpg">
+                                    <img alt="img" src="img/Borussia%20Dortmund%20kopie.jpg">
                                     <div class="popup-full">
                                         <i class="material-icons close">clear</i>
                                         <div class="popup-img">
-                                            <img src="img/Borussia%20Dortmund%20kopie.jpg">
+                                            <img alt="img" src="img/Borussia%20Dortmund%20kopie.jpg">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="popup">
-                                    <img src="img/FC%20Barcelona%20kopie.jpg">
+                                    <img alt="img" src="img/FC%20Barcelona%20kopie.jpg">
                                     <div class="popup-full">
                                         <i class="material-icons close">clear</i>
                                         <div class="popup-img">
-                                            <img src="img/FC%20Barcelona%20kopie.jpg">
+                                            <img alt="img" src="img/FC%20Barcelona%20kopie.jpg">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="popup">
-                                    <img src="img/Real%20Madrid%20kopie.jpg">
+                                    <img alt="img" src="img/Real%20Madrid%20kopie.jpg">
                                     <div class="popup-full">
                                         <i class="material-icons close">clear</i>
                                         <div class="popup-img">
-                                            <img src="img/Real%20Madrid%20kopie.jpg">
+                                            <img alt="img" src="img/Real%20Madrid%20kopie.jpg">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="popup">
-                                    <img src="img/VVV%20Venlo%20kopie.jpg">
+                                    <img alt="img" src="img/VVV%20Venlo%20kopie.jpg">
                                     <div class="popup-full">
                                         <i class="material-icons close">clear</i>
                                         <div class="popup-img">
-                                            <img src="img/VVV%20Venlo%20kopie.jpg">
+                                            <img alt="img" src="img/VVV%20Venlo%20kopie.jpg">
                                         </div>
                                     </div>
                                 </div>
@@ -146,7 +146,7 @@ if ($result->num_rows > 0) {
         $coach = $row["coach"];
         $punten = $row["punten"];
         $img = $row["img"];
-        echo "<script>addTeam($pos, \"$naam\", \"$aanvoerder\", \"$klas\", \"$coach\", $punten, \"$img\")</script>";
+        echo "<script>addTeam(\"$pos\", \"$naam\", \"$aanvoerder\", \"$klas\", \"$coach\", \"$punten\", \"$img\")</script>";
     }
 }
 $conn->close();

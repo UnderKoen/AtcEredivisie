@@ -208,7 +208,8 @@ if ($result->num_rows > 0) {
         $doelsaldo = $row["doelsaldo"];
         $punten = $row["punten"];
 
-        echo "<script>addResults(\"#\"+$pos,\"$naam\", $gespeeld, $winst, $gelijk, $verloren, $doelpuntenplus, $doelpuntenmin, $doelsaldo, $punten)</script>";
+        echo "<script>addResults(\"#\"+\"$pos\",\"$naam\", \"$gespeeld\", \"$winst\", \"$gelijk\", \"$verloren\", 
+\"$doelpuntenplus\", \"$doelpuntenmin\", \"$doelsaldo\", \"$punten\")</script>";
     }
 }
 

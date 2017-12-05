@@ -44,7 +44,7 @@ function addTeam(position, name, aanvoerder, klas, coach, punten, imgUrl) {
     content.appendChild(img);
 
     var list = document.createElement("div");
-    list.className = "list"
+    list.className = "list";
     content.appendChild(list);
 
     var itemImg = document.createElement("img");
@@ -104,15 +104,6 @@ function addTeam(position, name, aanvoerder, klas, coach, punten, imgUrl) {
     } else {
         tbody.appendChild(lastRow);
     }
-}
-
-function hasChildClass(node, className) {
-    var childs = node.childNodes;
-    for (var i = 0; i < childs.length; i++) {
-        var child = childs[i];
-        if (child.classList.contains(className)) return true;
-    }
-    return false;
 }
 
 function hasChildNode(node, nodeName) {
