@@ -30,9 +30,9 @@ function addTeam(position, name, aanvoerder, klas, coach, punten, imgUrl) {
     var article = document.createElement("article");
     td.appendChild(article);
 
-    var h1 = document.createElement("h1");
-    h1.innerHTML = "#" + position + " " + name;
-    article.appendChild(h1);
+    var h2 = document.createElement("h2");
+    h2.innerHTML = "#" + position + " " + name;
+    article.appendChild(h2);
 
     var content = document.createElement("div");
     content.className = "content";
