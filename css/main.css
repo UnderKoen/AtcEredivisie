@@ -117,10 +117,17 @@ article .list .item img {
 
 .slideshow img {
     min-width: 50%;
-    width: 1000px;
     max-width: 50%;
-    margin-left: 25%;
-    margin-right: 25%;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.popup-img img {
+    min-width: inherit;
+    width: inherit;
+    max-width: inherit;
+    padding-left: inherit;
+    padding-right: inherit;
 }
 
 .slideshow .previous {
@@ -142,6 +149,10 @@ article .list .item img {
     font-size: 32px;
     cursor: e-resize;
     user-select: none;
+}
+
+.slideshow .items {
+    width: 100%;
 }
 
 .slideshow .items .item {
@@ -175,11 +186,11 @@ article .list .item img {
 
 .popup .popup-full .popup-img img {
     width: auto !important;
-    display: block !important;;
-    max-width: 70vw !important;;
-    max-height: 80vh !important;;
-    margin: auto !important;;
-    cursor: auto !important;;
+    display: block !important;
+    max-width: 70vw !important;
+    max-height: 80vh !important;
+    margin: auto !important;
+    cursor: auto !important;
 }
 
 .popup .popup-full .close {
