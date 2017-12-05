@@ -71,6 +71,10 @@
                 <a href="teams.php">Teams</a>
                 <a class="current" href="results.php">Resultaten</a>
             </div>
+            <div class="logos">
+                <img class="logo_atc" src="img/logo_atc.jpg">
+                <img class="logo_eredivisie" src="img/logo_eredivisie.jpg">
+            </div>
         </header>
         <main>
             <span class="spacing"></span>
