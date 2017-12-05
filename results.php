@@ -7,7 +7,8 @@
         <script src="js/results.js"></script>
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" type="text/css" href="css/menu.css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+              rel="stylesheet">
         <link rel="icon" type="image/png" href="img/cursor.png">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <style>
@@ -24,15 +25,22 @@
 
             tbody td, tbody th {
                 padding: 5px;
-                border-bottom: #9E9E9E 3px solid;
+                border-bottom: #311B92 3px solid;
                 text-align: left;
             }
 
             tbody tr:first-child th {
                 position: sticky;
                 top: 126px;
-                background-color: #9E9E9E;
+                padding: 10px 0 0;
+                background-color: #E0E0E0;
                 border-bottom: 0;
+            }
+
+            tbody tr:first-child th div {
+                background-color: #AD1457;
+                color: white;
+                padding: 10px;
             }
 
             tbody th.number, tbody td.number {
@@ -41,6 +49,17 @@
 
             tbody tr:hover {
                 background-color: #BDBDBD;
+            }
+
+            tr td.round {
+                border-bottom: #311B92 3px solid;
+                text-align: center;
+                font-weight: bold;
+                padding: 15px;
+            }
+
+            tr:hover td.round {
+                background-color: #E0E0E0;
             }
         </style>
     </head>
@@ -61,16 +80,36 @@
                     <table class="table-results">
                         <tbody>
                             <tr>
-                                <th>Naam</th>
-                                <th class="number">Positie</th>
-                                <th class="number">Gespeeld</th>
-                                <th class="number">Winst</th>
-                                <th class="number">Gelijk</th>
-                                <th class="number">Verloren</th>
-                                <th class="number">Doelpunten+</th>
-                                <th class="number">Doelpunten-</th>
-                                <th class="number">Doelpunten Saldo</th>
-                                <th class="number">Punten</th>
+                                <th>
+                                    <div>Positie</div>
+                                </th>
+                                <th>
+                                    <div>Naam</div>
+                                </th>
+                                <th class="number">
+                                    <div>Gespeeld</div>
+                                </th>
+                                <th class="number">
+                                    <div>Winst</div>
+                                </th>
+                                <th class="number">
+                                    <div>Gelijk</div>
+                                </th>
+                                <th class="number">
+                                    <div>Verloren</div>
+                                </th>
+                                <th class="number">
+                                    <div>Doelpunten+</div>
+                                </th>
+                                <th class="number">
+                                    <div>Doelpunten-</div>
+                                </th>
+                                <th class="number">
+                                    <div>DoelSaldo</div>
+                                </th>
+                                <th class="number">
+                                    <div>Punten</div>
+                                </th>
                             </tr>
                         </tbody>
                     </table>
@@ -82,11 +121,21 @@
                     <table class="table-games">
                         <tbody>
                             <tr>
-                                <th>Team 1</th>
-                                <th>Team 2</th>
-                                <th class="number">Team 1 Score</th>
-                                <th class="number">Team 2 Score</th>
-                                <th class="number">Datum</th>
+                                <th>
+                                    <div>Team 1</div>
+                                </th>
+                                <th>
+                                    <div>Team 2</div>
+                                </th>
+                                <th class="number">
+                                    <div>Team 1 Score</div>
+                                </th>
+                                <th class="number">
+                                    <div>Team 2 Score</div>
+                                </th>
+                                <th class="number">
+                                    <div>Datum</div>
+                                </th>
                             </tr>
                         </tbody>
                     </table>
@@ -149,7 +198,7 @@ if ($result->num_rows > 0) {
     // output data of each row
     while ($row = $result->fetch_assoc()) {
         $naam = $row["naam"];
-        $pos = $pos+1;
+        $pos = $pos + 1;
         $gespeeld = $row["gespeeld"];
         $winst = $row["winst"];
         $gelijk = $row["gelijk"];
@@ -159,10 +208,12 @@ if ($result->num_rows > 0) {
         $doelsaldo = $row["doelsaldo"];
         $punten = $row["punten"];
 
-        echo "<script>addResults(\"$naam\", $pos, $gespeeld, $winst, $gelijk, $verloren, $doelpuntenplus, $doelpuntenmin, $doelsaldo, $punten)</script>";
+        echo "<script>addResults(\"#\"+$pos,\"$naam\", $gespeeld, $winst, $gelijk, $verloren, $doelpuntenplus, $doelpuntenmin, $doelsaldo, $punten)</script>";
     }
 }
 
+$round = 0;
+$i = 3;
 if ($result2->num_rows > 0) {
     // output data of each row
     while ($row = $result2->fetch_assoc()) {
@@ -175,6 +226,14 @@ if ($result2->num_rows > 0) {
         if ($team1score == null || $team2score == null) {
             $team1score = "-";
             $team2score = "-";
+        }
+
+        if ($i == 3) {
+            $round = $round + 1;
+            $i = 0;
+            echo "<script>addRowGame(\"Speelronde $round\")</script>";
+        } else {
+            $i = $i + 1;
         }
 
         echo "<script>addGame(\"$team1\", \"$team1score\", \"$team2score\", \"$team2\", \"$datum\")</script>";

@@ -7,7 +7,8 @@
         <script src="js/teams.js"></script>
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" type="text/css" href="css/menu.css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+              rel="stylesheet">
         <link rel="icon" type="image/png" href="img/cursor.png">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <style>
@@ -44,6 +45,61 @@
         </header>
         <main>
             <span class="spacing"></span>
+            <section>
+                <h1>Team Foto's</h1>
+                <div class="content">
+                    <div class="slideshow">
+                        <div class="items">
+                            <div class="item active">
+                                <div class="popup">
+                                    <img src="img/Borussia%20Dortmund%20kopie.jpg">
+                                    <div class="popup-full">
+                                        <i class="material-icons close">clear</i>
+                                        <div class="popup-img">
+                                            <img src="img/Borussia%20Dortmund%20kopie.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="popup">
+                                    <img src="img/FC%20Barcelona%20kopie.jpg">
+                                    <div class="popup-full">
+                                        <i class="material-icons close">clear</i>
+                                        <div class="popup-img">
+                                            <img src="img/FC%20Barcelona%20kopie.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="popup">
+                                    <img src="img/Real%20Madrid%20kopie.jpg">
+                                    <div class="popup-full">
+                                        <i class="material-icons close">clear</i>
+                                        <div class="popup-img">
+                                            <img src="img/Real%20Madrid%20kopie.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="popup">
+                                    <img src="img/VVV%20Venlo%20kopie.jpg">
+                                    <div class="popup-full">
+                                        <i class="material-icons close">clear</i>
+                                        <div class="popup-img">
+                                            <img src="img/VVV%20Venlo%20kopie.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <i class="material-icons previous" onclick="previousSlideShow(this)">chevron_left</i>
+                        <i class="material-icons next" onclick="nextSlideShow(this)">chevron_right</i>
+                    </div>
+                </div>
+            </section>
             <section class="teams">
                 <h1>Teams</h1>
                 <div class="content">

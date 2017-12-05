@@ -1,4 +1,4 @@
-function addResults(naam, position, gespeeld, winst, gelijk, verloren, doelpuntenplus, doelpuntenmin, doelsaldo, punten) {
+function addResults(position, naam, gespeeld, winst, gelijk, verloren, doelpuntenplus, doelpuntenmin, doelsaldo, punten) {
     var table = document.getElementsByClassName("table-results")[0];
     var tbody = table.getElementsByTagName("tbody")[0];
     var tr = document.createElement("tr");
@@ -6,7 +6,6 @@ function addResults(naam, position, gespeeld, winst, gelijk, verloren, doelpunte
     naamNode.innerHTML = naam;
     var positionNode = document.createElement("td");
     positionNode.innerHTML = position;
-    positionNode.className = "number";
     var gespeeldNode = document.createElement("td");
     gespeeldNode.innerHTML = gespeeld;
     gespeeldNode.className = "number";
@@ -31,8 +30,8 @@ function addResults(naam, position, gespeeld, winst, gelijk, verloren, doelpunte
     var puntenNode = document.createElement("td");
     puntenNode.innerHTML = punten;
     puntenNode.className = "number";
-    tr.appendChild(naamNode);
     tr.appendChild(positionNode);
+    tr.appendChild(naamNode);
     tr.appendChild(gespeeldNode);
     tr.appendChild(winstNode);
     tr.appendChild(gelijkNode);
@@ -66,5 +65,17 @@ function addGame(team1, team1score, team2score, team2, datum) {
     tr.appendChild(team1scoreNode);
     tr.appendChild(team2scoreNode);
     tr.appendChild(datumNode);
+    tbody.appendChild(tr);
+}
+
+function addRowGame(text) {
+    var table = document.getElementsByClassName("table-games")[0];
+    var tbody = table.getElementsByTagName("tbody")[0];
+    var tr = document.createElement("tr");
+    var td = document.createElement("td");
+    td.colSpan = 5;
+    td.innerText = text;
+    td.className = "round";
+    tr.appendChild(td);
     tbody.appendChild(tr);
 }
