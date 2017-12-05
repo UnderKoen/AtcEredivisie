@@ -9,7 +9,7 @@
         <link rel="stylesheet" type="text/css" href="css/menu.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
               rel="stylesheet">
-        <link rel="icon" type="image/png" href="img/cursor.png">
+        <link rel="icon" type="image/png" href="img/logo_page.png">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <style>
             table {

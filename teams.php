@@ -9,7 +9,7 @@
         <link rel="stylesheet" type="text/css" href="css/menu.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
               rel="stylesheet">
-        <link rel="icon" type="image/png" href="img/cursor.png">
+        <link rel="icon" type="image/png" href="img/logo_page.png">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <style>
             section.teams .content .teamsList table tbody tr td {
@@ -52,44 +52,44 @@
                         <div class="items">
                             <div class="item active">
                                 <div class="popup">
-                                    <img alt="img" src="img/Borussia%20Dortmund%20kopie.jpg">
+                                    <img alt="img" src="img/foto_team_bvb.jpg">
                                     <div class="popup-full">
                                         <i class="material-icons close">clear</i>
                                         <div class="popup-img">
-                                            <img alt="img" src="img/Borussia%20Dortmund%20kopie.jpg">
+                                            <img alt="img" src="img/foto_team_bvb.jpg">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="popup">
-                                    <img alt="img" src="img/FC%20Barcelona%20kopie.jpg">
+                                    <img alt="img" src="img/foto_team_fcb.jpg">
                                     <div class="popup-full">
                                         <i class="material-icons close">clear</i>
                                         <div class="popup-img">
-                                            <img alt="img" src="img/FC%20Barcelona%20kopie.jpg">
+                                            <img alt="img" src="img/foto_team_fcb.jpg">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="popup">
-                                    <img alt="img" src="img/Real%20Madrid%20kopie.jpg">
+                                    <img alt="img" src="img/foto_team_rm.jpg">
                                     <div class="popup-full">
                                         <i class="material-icons close">clear</i>
                                         <div class="popup-img">
-                                            <img alt="img" src="img/Real%20Madrid%20kopie.jpg">
+                                            <img alt="img" src="img/foto_team_rm.jpg">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="popup">
-                                    <img alt="img" src="img/VVV%20Venlo%20kopie.jpg">
+                                    <img alt="img" src="img/foto_team_vvv.jpg">
                                     <div class="popup-full">
                                         <i class="material-icons close">clear</i>
                                         <div class="popup-img">
-                                            <img alt="img" src="img/VVV%20Venlo%20kopie.jpg">
+                                            <img alt="img" src="img/foto_team_vvv.jpg">
                                         </div>
                                     </div>
                                 </div>

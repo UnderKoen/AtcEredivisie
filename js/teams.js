@@ -48,7 +48,7 @@ function addTeam(position, name, aanvoerder, klas, coach, punten, imgUrl) {
     content.appendChild(list);
 
     var itemImg = document.createElement("img");
-    itemImg.src = "img/list-ball.png";
+    itemImg.src = "img/logo_list.jpg";
 
     var aanvoerderItem = document.createElement("span");
     aanvoerderItem.className = "item";
@@ -60,7 +60,7 @@ function addTeam(position, name, aanvoerder, klas, coach, punten, imgUrl) {
     aanvoerderItem.appendChild(aanvoerderNode);
 
     itemImg = document.createElement("img");
-    itemImg.src = "img/list-ball.png";
+    itemImg.src = "img/logo_list.jpg";
 
     var klasItem = document.createElement("span");
     klasItem.className = "item";
@@ -72,7 +72,7 @@ function addTeam(position, name, aanvoerder, klas, coach, punten, imgUrl) {
     klasItem.appendChild(klasNode);
 
     itemImg = document.createElement("img");
-    itemImg.src = "img/list-ball.png";
+    itemImg.src = "img/logo_list.jpg";
 
     var coachItem = document.createElement("span");
     coachItem.className = "item";
@@ -88,7 +88,7 @@ function addTeam(position, name, aanvoerder, klas, coach, punten, imgUrl) {
     coachItem.appendChild(coachNode);
 
     itemImg = document.createElement("img");
-    itemImg.src = "img/list-ball.png";
+    itemImg.src = "img/logo_list.jpg";
 
     var puntenItem = document.createElement("span");
     puntenItem.className = "item";
