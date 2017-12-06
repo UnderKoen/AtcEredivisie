@@ -6,7 +6,7 @@
         <script src="js/main.js"></script>
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" type="text/css" href="css/menu.css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
               rel="stylesheet">
         <link rel="icon" type="image/png" href="img/logo_page.png">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -31,97 +31,17 @@
                 <div class="content">
                     <div class="slideshow">
                         <div class="items">
-                            <div class="item active">
-                                <div class="popup">
-                                    <img alt="img" src="img/foto_main_1.jpg">
-                                    <div class="popup-full">
-                                        <i class="material-icons close">clear</i>
-                                        <div class="popup-img">
-                                            <img alt="img" src="img/foto_main_1.jpg">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="popup">
-                                    <img alt="img" src="img/foto_main_2.jpg">
-                                    <div class="popup-full">
-                                        <i class="material-icons close">clear</i>
-                                        <div class="popup-img">
-                                            <img alt="img" src="img/foto_main_2.jpg">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="popup">
-                                    <img alt="img" src="img/foto_main_3.jpg">
-                                    <div class="popup-full">
-                                        <i class="material-icons close">clear</i>
-                                        <div class="popup-img">
-                                            <img alt="img" src="img/foto_main_3.jpg">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="popup">
-                                    <img alt="img" src="img/foto_main_4.jpg">
-                                    <div class="popup-full">
-                                        <i class="material-icons close">clear</i>
-                                        <div class="popup-img">
-                                            <img alt="img" src="img/foto_main_4.jpg">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="popup">
-                                    <img alt="img" src="img/foto_main_5.jpg">
-                                    <div class="popup-full">
-                                        <i class="material-icons close">clear</i>
-                                        <div class="popup-img">
-                                            <img alt="img" src="img/foto_main_5.jpg">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="popup">
-                                    <img alt="img" src="img/foto_main_6.jpg">
-                                    <div class="popup-full">
-                                        <i class="material-icons close">clear</i>
-                                        <div class="popup-img">
-                                            <img alt="img" src="img/foto_main_6.jpg">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="popup">
-                                    <img alt="img" src="img/foto_main_7.jpg">
-                                    <div class="popup-full">
-                                        <i class="material-icons close">clear</i>
-                                        <div class="popup-img">
-                                            <img alt="img" src="img/foto_main_7.jpg">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="popup">
-                                    <img alt="img" src="img/foto_main_8.jpg">
-                                    <div class="popup-full">
-                                        <i class="material-icons close">clear</i>
-                                        <div class="popup-img">
-                                            <img alt="img" src="img/foto_main_8.jpg">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <img class="item active" alt="img" src="img/foto_main_1.jpg" onclick="showPopup(this)">
+                            <img class="item" alt="img" src="img/foto_main_2.jpg" onclick="showPopup(this)">
+                            <img class="item" alt="img" src="img/foto_main_3.jpg" onclick="showPopup(this)">
+                            <img class="item" alt="img" src="img/foto_main_4.jpg" onclick="showPopup(this)">
+                            <img class="item" alt="img" src="img/foto_main_5.jpg" onclick="showPopup(this)">
+                            <img class="item" alt="img" src="img/foto_main_6.jpg" onclick="showPopup(this)">
+                            <img class="item" alt="img" src="img/foto_main_7.jpg" onclick="showPopup(this)">
+                            <img class="item" alt="img" src="img/foto_main_8.jpg" onclick="showPopup(this)">
                         </div>
-                        <i class="material-icons previous" onclick="previousSlideShow(this)">chevron_left</i>
-                        <i class="material-icons next" onclick="nextSlideShow(this)">chevron_right</i>
+                        <i class="previous" onclick="previousSlideShow(this.parentElement)">chevron_left</i>
+                        <i class="next" onclick="nextSlideShow(this.parentElement)">chevron_right</i>
                     </div>
                 </div>
             </section>
@@ -131,85 +51,41 @@
                     <article>
                         <h2>Spel regels</h2>
                         <div class="content">
-                            <div class="list">
-                                <span class="item">
-                                    <img alt="img" src="img/logo_list.jpg">
-                                    <span>Geen slidings</span>
-                                </span>
-                                <span class="item">
-                                    <img alt="img" src="img/logo_list.jpg">
-                                    <span>Terugspeelbal niet in de handen</span>
-                                </span>
-                                <span class="item">
-                                    <img alt="img" src="img/logo_list.jpg">
-                                    <span>Uitballen = inschieten</span>
-                                </span>
-                                <span class="item">
-                                    <img alt="img" src="img/logo_list.jpg">
-                                    <span>Vrije trappen = 4 meter afstand</span>
-                                </span>
-                                <span class="item">
-                                    <img alt="img" src="img/logo_list.jpg">
-                                    <span>8 minuten per wedstrijd</span>
-                                </span>
-                                <span class="item">
-                                    <img alt="img" src="img/logo_list.jpg">
-                                    <span>Altijd 1 meisje in het veld</span>
-                                </span>
-                            </div>
+                            <ul class="list">
+                                <li>Geen slidings</li>
+                                <li>Terugspeelbal niet in de handen</li>
+                                <li>Uitballen = inschieten</li>
+                                <li>Vrije trappen = 4 meter afstand</li>
+                                <li>8 minuten per wedstrijd</li>
+                                <li>Altijd 1 meisje in het veld</li>
+                            </ul>
                         </div>
                     </article>
                     <article>
                         <h2>Punten geving</h2>
                         <div class="content">
-                            <div class="list">
-                                <span class="item">
-                                    <img alt="img" src="img/logo_list.jpg">
-                                    <span>Winst = 3 punten</span>
-                                </span>
-                                <span class="item">
-                                    <img alt="img" src="img/logo_list.jpg">
-                                    <span>Gelijkspel = 1 punt</span>
-                                </span>
-                                <span class="item">
-                                    <img alt="img" src="img/logo_list.jpg">
-                                    <span>Verlies = 0 punten</span>
-                                </span>
-                            </div>
+                            <ul class="list">
+                                <li>Winst = 3 punten</li>
+                                <li>Gelijkspel = 1 punt</li>
+                                <li>Verlies = 0 punten</li>
+                            </ul>
                         </div>
                     </article>
                     <article>
                         <h2>Algemene regels</h2>
                         <div class="content">
-                            <div class="list">
-                                <span class="item">
-                                    <img alt="img" src="img/logo_list.jpg">
-                                    <span>Winst + clean sheet = doelpunt extra</span>
-                                </span>
-                                <span class="item">
-                                    <img alt="img" src="img/logo_list.jpg">
-                                    <span>Bij te laat komen voor de eerste wedstrijd: beginnen met een 1-0 achterstand
-                                        Maximaal 5
-                                        minuten na de bel</span>
-                                </span>
-                                <span class="item">
-                                    <img alt="img" src="img/logo_list.jpg">
-                                    <span>Bij gelijke stand in eindstand: doelsaldo bepalend Doelsaldo gelijk =
-                                        onderling resultaat telt</span>
-                                </span>
-                                <span class="item">
-                                    <img alt="img" src="img/logo_list.jpg">
-                                    <span>Bij slecht weer: wedstrijd verplaatsen naar andere dag</span>
-                                </span>
-                                <span class="item">
-                                    <img alt="img" src="img/logo_list.jpg">
-                                    <span>Bij voorkeur warme kleren aan/mee i.v.m. de koud</span>
-                                </span>
-                                <span class="item">
-                                    <img alt="img" src="img/logo_list.jpg">
-                                    <span>Alleen spelende teams in het veld, wissels buiten de kooi</span>
-                                </span>
-                            </div>
+                            <ul class="list">
+                                <li>Winst + clean sheet = doelpunt extra</li>
+                                <li>Bij te laat komen voor de eerste wedstrijd: beginnen met een 1-0 achterstand.
+                                    Maximaal 5 minuten na de bel
+                                </li>
+                                <li>Bij gelijke stand in eindstand: doelsaldo bepalend Doelsaldo gelijk = onderling
+                                    resultaat telt
+                                </li>
+                                <li>Bij slecht weer: wedstrijd verplaatsen naar andere dag</li>
+                                <li>Bij voorkeur warme kleren aan/mee i.v.m. de koud</li>
+                                <li>Alleen spelende teams in het veld, wissels buiten de kooi</li>
+                            </ul>
                         </div>
                     </article>
                 </div>

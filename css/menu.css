@@ -35,15 +35,16 @@
 }
 
 .top .logos img {
-    top: 0px;
+    top: 0;
     position: fixed;
     padding: 10px;
     height: 60px;
     filter: drop-shadow(5px 5px 5px black);
+    user-select: none;
 }
 
 .top .logos .logo_atc {
-    left: 0px;
+    left: 0;
 }
 
 .top .logos .logo_eredivisie {

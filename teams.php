@@ -7,7 +7,7 @@
         <script src="js/teams.js"></script>
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" type="text/css" href="css/menu.css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
               rel="stylesheet">
         <link rel="icon" type="image/png" href="img/logo_page.png">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -18,7 +18,7 @@
 
             img.logo {
                 max-width: 20%;
-                padding: 20px;
+                padding: 5%;
             }
 
             section.teams article .content {
@@ -26,11 +26,11 @@
                 height: 175px;
             }
 
-            .list {
+            ul.list {
                 position: absolute;
-                top: calc(0.83em + 10px);
+                top: calc(0.83em + 5%);
                 margin-left: 30%;
-                width: 70%;
+                width: calc(70% - 40px);
             }
         </style>
     </head>
@@ -54,53 +54,13 @@
                 <div class="content">
                     <div class="slideshow">
                         <div class="items">
-                            <div class="item active">
-                                <div class="popup">
-                                    <img alt="img" src="img/foto_team_bvb.jpg">
-                                    <div class="popup-full">
-                                        <i class="material-icons close">clear</i>
-                                        <div class="popup-img">
-                                            <img alt="img" src="img/foto_team_bvb.jpg">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="popup">
-                                    <img alt="img" src="img/foto_team_fcb.jpg">
-                                    <div class="popup-full">
-                                        <i class="material-icons close">clear</i>
-                                        <div class="popup-img">
-                                            <img alt="img" src="img/foto_team_fcb.jpg">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="popup">
-                                    <img alt="img" src="img/foto_team_rm.jpg">
-                                    <div class="popup-full">
-                                        <i class="material-icons close">clear</i>
-                                        <div class="popup-img">
-                                            <img alt="img" src="img/foto_team_rm.jpg">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="popup">
-                                    <img alt="img" src="img/foto_team_vvv.jpg">
-                                    <div class="popup-full">
-                                        <i class="material-icons close">clear</i>
-                                        <div class="popup-img">
-                                            <img alt="img" src="img/foto_team_vvv.jpg">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <img class="item active" alt="img" src="img/foto_team_bvb.jpg" onclick="showPopup(this)">
+                            <img class="item" alt="img" src="img/foto_team_fcb.jpg" onclick="showPopup(this)">
+                            <img class="item" alt="img" src="img/foto_team_rm.jpg" onclick="showPopup(this)">
+                            <img class="item" alt="img" src="img/foto_team_vvv.jpg" onclick="showPopup(this)">
                         </div>
-                        <i class="material-icons previous" onclick="previousSlideShow(this)">chevron_left</i>
-                        <i class="material-icons next" onclick="nextSlideShow(this)">chevron_right</i>
+                        <i class="previous" onclick="previousSlideShow(this.parentElement)">chevron_left</i>
+                        <i class="next" onclick="nextSlideShow(this.parentElement)">chevron_right</i>
                     </div>
                 </div>
             </section>
@@ -124,10 +84,8 @@ $username = "u22301p18105_test";
 $password = "test123";
 $dbname = "u22301p18105_atcEredivisie";
 
-// Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
@@ -141,9 +99,8 @@ $result = $conn->query($sql);
 
 $pos = 0;
 if ($result->num_rows > 0) {
-    // output data of each row
     while ($row = $result->fetch_assoc()) {
-        $pos = $pos+1;
+        $pos = $pos + 1;
         $naam = $row["naam"];
         $aanvoerder = $row["aanvoerder"];
         $klas = $row["klas"];

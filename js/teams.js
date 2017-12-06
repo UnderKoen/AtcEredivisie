@@ -43,61 +43,29 @@ function addTeam(position, name, aanvoerder, klas, coach, punten, imgUrl) {
     img.src = imgUrl;
     content.appendChild(img);
 
-    var list = document.createElement("div");
+    var list = document.createElement("ul");
     list.className = "list";
     content.appendChild(list);
 
-    var itemImg = document.createElement("img");
-    itemImg.src = "img/logo_list.jpg";
-
-    var aanvoerderItem = document.createElement("span");
-    aanvoerderItem.className = "item";
+    var aanvoerderItem = document.createElement("li");
+    aanvoerderItem.innerHTML = "Aanvoerder: " + aanvoerder;
     list.appendChild(aanvoerderItem);
-    aanvoerderItem.appendChild(itemImg);
 
-    var aanvoerderNode = document.createElement("span");
-    aanvoerderNode.innerHTML = "Aanvoerder: " + aanvoerder;
-    aanvoerderItem.appendChild(aanvoerderNode);
-
-    itemImg = document.createElement("img");
-    itemImg.src = "img/logo_list.jpg";
-
-    var klasItem = document.createElement("span");
-    klasItem.className = "item";
+    var klasItem = document.createElement("li");
+    klasItem.innerHTML = "Klas: " + klas;
     list.appendChild(klasItem);
-    klasItem.appendChild(itemImg);
 
-    var klasNode = document.createElement("span");
-    klasNode.innerHTML = "Klas: " + klas;
-    klasItem.appendChild(klasNode);
-
-    itemImg = document.createElement("img");
-    itemImg.src = "img/logo_list.jpg";
-
-    var coachItem = document.createElement("span");
-    coachItem.className = "item";
-    list.appendChild(coachItem);
-    coachItem.appendChild(itemImg);
-
-    var coachNode = document.createElement("span");
+    var coachItem = document.createElement("li");
     if (coach !== "") {
-        coachNode.innerHTML = "Coach: " + coach;
+        coachItem.innerHTML = "Coach: " + coach;
     } else {
-        coachNode.innerHTML = "Coach: -";
+        coachItem.innerHTML = "Coach: -";
     }
-    coachItem.appendChild(coachNode);
+    list.appendChild(coachItem);
 
-    itemImg = document.createElement("img");
-    itemImg.src = "img/logo_list.jpg";
-
-    var puntenItem = document.createElement("span");
-    puntenItem.className = "item";
+    var puntenItem = document.createElement("li");
+    puntenItem.innerHTML = "Punten: " + punten;
     list.appendChild(puntenItem);
-    puntenItem.appendChild(itemImg);
-
-    var puntenNode = document.createElement("span");
-    puntenNode.innerHTML = "Punten: " + punten;
-    puntenItem.appendChild(puntenNode);
 
     if (islast) {
         lastRow = null;

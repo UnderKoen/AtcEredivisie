@@ -60,50 +60,52 @@ section article h2 {
 }
 
 /*Beginning list*/
-.list .item img {
-    display: block;
-    position: absolute;
-    border-right: solid white 8px;
-    border-bottom: solid white 2px;
-    border-top: solid white 2px;
-    border-radius: 100px;
-    margin-left: 8px;
-    margin-top: -2px;
+ul.list {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-section .list .item img {
-    border-right: solid #E0E0E0 8px;
-    border-bottom: solid #E0E0E0 2px;
-    border-top: solid #E0E0E0 2px;
-}
-
-article .list .item img {
-    border-right: solid #EEEEEE 8px;
-    border-bottom: solid #EEEEEE 2px;
-    border-top: solid #EEEEEE 2px;
-}
-
-.list .item {
-    display: block;
-    margin-right: 8px;
-    height: 40px;
-}
-
-.list .item span {
+ul.list li {
     display: flex;
     align-items: center;
     padding-left: 16px;
-    margin: auto auto auto 40px;
     height: 32px;
     background-color: #8e8e8e;
     color: white;
     font-weight: bold;
     font-size: 14px;
     vertical-align: middle;
+    margin: auto 8px 8px auto;
 }
 
-.list .item:nth-child(2n) span {
+ul.list li:nth-child(2n) {
     background-color: #616161;
+}
+
+ul.list li::before {
+    content: url("../img/logo_list.jpg");
+    display: block;
+    position: absolute;
+    margin-left: -48px;
+    border-right: solid white 8px;
+    border-bottom: solid white 2px;
+    border-top: solid white 2px;
+    border-radius: 100px;
+    user-select: none;
+    height: 32px;
+}
+
+section ul.list li::before {
+    border-right-color: #E0E0E0;
+    border-bottom-color: #E0E0E0;
+    border-top-color: #E0E0E0;
+}
+
+article ul.list li::before {
+    border-right-color: #EEEEEE;
+    border-bottom-color: #EEEEEE;
+    border-top-color: #EEEEEE;
 }
 
 /*Ending list*/
@@ -115,14 +117,14 @@ article .list .item img {
     align-items: center;
 }
 
-.slideshow img {
+.slideshow .item {
     min-width: 50%;
     max-width: 50%;
     padding-left: 25%;
     padding-right: 25%;
 }
 
-.popup-img img {
+.slideshow .popup-img img {
     min-width: inherit;
     width: inherit;
     max-width: inherit;
@@ -130,25 +132,25 @@ article .list .item img {
     padding-right: inherit;
 }
 
-.slideshow .previous {
+.slideshow i {
     position: absolute;
-    margin-left: calc(12.5% - 16px);
     background-color: #BDBDBD;
     border-radius: 32px;
     font-size: 32px;
-    cursor: w-resize;
     user-select: none;
+    font-family: 'Material Icons', serif;
+    font-style: normal;
+}
+
+.slideshow .previous {
+    margin-left: calc(12.5% - 16px);
+    cursor: w-resize;
 }
 
 .slideshow .next {
-    position: absolute;
     margin-left: calc(87.5% - 16px);
     margin-right: calc(12.5% - 16px);
-    background-color: #BDBDBD;
-    border-radius: 32px;
-    font-size: 32px;
     cursor: e-resize;
-    user-select: none;
 }
 
 .slideshow .items {
@@ -162,55 +164,53 @@ article .list .item img {
 
 .slideshow .items .item.active {
     visibility: visible;
-    display: block;
+    display: inherit;
 }
 
 /*Ending slideshow*/
 
 /*Beginning popup img*/
-.popup img {
-    cursor: pointer;
-}
-
-.popup .popup-full .popup-img {
+.popup {
     position: fixed;
+    z-index: 100;
     top: 0;
     left: 0;
-    background-color: rgba(97, 97, 97, 0.75);
-    visibility: hidden;
     width: 100%;
     height: 100%;
-    display: grid;
-    z-index: 100;
 }
 
-.popup .popup-full .popup-img img {
-    width: auto !important;
-    display: block !important;
-    max-width: 70vw !important;
-    max-height: 80vh !important;
-    margin: auto !important;
-    cursor: auto !important;
-}
-
-.popup .popup-full .close {
+.popup .close {
     top: 5vh;
     right: 10vw;
     position: fixed;
     background-color: #BDBDBD;
     border-radius: 15px;
     z-index: 1000;
-    visibility: hidden;
     cursor: pointer;
+    user-select: none;
+    font-family: 'Material Icons', serif;
+    font-style: normal;
+    font-size: 24px;
 }
 
-.popup img:active ~ .popup-full .popup-img, .popup img:active ~ .popup-full .close,
-.popup .popup-full .popup-img:hover, .popup .popup-full .close:hover:not(:active) ~ .popup-img, .popup .popup-full:hover .close {
-    visibility: visible;
+.popup .popup-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(97, 97, 97, 0.75);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    z-index: 100;
 }
 
-.popup .popup-full .close:active {
-    visibility: hidden !important;
+.popup .popup-img img {
+    width: auto !important;
+    display: block !important;
+    max-width: 70vw !important;
+    max-height: 80vh !important;
+    margin: auto !important;
+    cursor: auto !important;
 }
 
 /*Ending popup img*/
@@ -223,14 +223,14 @@ footer {
     background-color: #78002e;
 }
 
-footer aside a {
-    color: white;
-    text-decoration: none;
-}
-
 footer aside {
     color: white;
     padding: 10px 50px;
+}
+
+footer aside a {
+    color: white;
+    text-decoration: none;
 }
 
 footer aside.left {
