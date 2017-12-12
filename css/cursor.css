@@ -1,0 +1,21 @@
+.top .menu {
+    list-style-type: none;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    box-shadow: black 0 1px 20px;
+    background-color: #AD1457;
+}
+
+.top .menu a {
+    background-color: #AD1457;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 13px 3vw 13px;
+}
+
+.top .menu a:hover, .top .menu a.current {
+    padding-bottom: 10px;
+    border-bottom: solid #311B92 3px;
+}
