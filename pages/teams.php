@@ -3,13 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <title>Atc Eredivisie - Teams</title>
-        <script src="js/main.js"></script>
-        <script src="js/teams.js"></script>
-        <link rel="stylesheet" type="text/css" href="css/main.css">
-        <link rel="stylesheet" type="text/css" href="css/menu.css">
+        <script src="../js/main.js"></script>
+        <script src="../js/teams.js"></script>
+        <link rel="stylesheet" type="text/css" href="../css/main.css">
+        <link rel="stylesheet" type="text/css" href="../css/menu.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
               rel="stylesheet">
-        <link rel="icon" type="image/png" href="img/logo_page.png">
+        <link rel="icon" type="image/png" href="../img/logo_page.png">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <style>
             section.teams .content .teamsList table tbody tr td {
@@ -41,10 +41,11 @@
                 <a href="home.html">Home</a>
                 <a class="current" href="teams.php">Teams</a>
                 <a href="results.php">Resultaten</a>
+                <a href="box-shadow.html">Box-Shadow</a> <!--Haal dit weg-->
             </div>
             <div class="logos">
-                <img class="logo_atc" src="img/logo_atc.jpg">
-                <img class="logo_eredivisie" src="img/logo_eredivisie.jpg">
+                <img class="logo_atc" src="../img/logo_atc.jpg">
+                <img class="logo_eredivisie" src="../img/logo_eredivisie.jpg">
             </div>
         </header>
         <main>
@@ -54,10 +55,10 @@
                 <div class="content">
                     <div class="slideshow">
                         <div class="items">
-                            <img class="item active" alt="img" src="img/foto_team_bvb.jpg" onclick="showPopup(this)">
-                            <img class="item" alt="img" src="img/foto_team_fcb.jpg" onclick="showPopup(this)">
-                            <img class="item" alt="img" src="img/foto_team_rm.jpg" onclick="showPopup(this)">
-                            <img class="item" alt="img" src="img/foto_team_vvv.jpg" onclick="showPopup(this)">
+                            <img class="item active" alt="img" src="../img/foto_team_bvb.jpg" onclick="showPopup(this)">
+                            <img class="item" alt="img" src="../img/foto_team_fcb.jpg" onclick="showPopup(this)">
+                            <img class="item" alt="img" src="../img/foto_team_rm.jpg" onclick="showPopup(this)">
+                            <img class="item" alt="img" src="../img/foto_team_vvv.jpg" onclick="showPopup(this)">
                         </div>
                         <i class="previous" onclick="previousSlideShow(this.parentElement)">chevron_left</i>
                         <i class="next" onclick="nextSlideShow(this.parentElement)">chevron_right</i>

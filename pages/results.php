@@ -3,13 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <title>Atc Eredivisie - Results</title>
-        <script src="js/main.js"></script>
-        <script src="js/results.js"></script>
-        <link rel="stylesheet" type="text/css" href="css/main.css">
-        <link rel="stylesheet" type="text/css" href="css/menu.css">
+        <script src="../js/main.js"></script>
+        <script src="../js/results.js"></script>
+        <link rel="stylesheet" type="text/css" href="../css/main.css">
+        <link rel="stylesheet" type="text/css" href="../css/menu.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
               rel="stylesheet">
-        <link rel="icon" type="image/png" href="img/logo_page.png">
+        <link rel="icon" type="image/png" href="../img/logo_page.png">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <style>
             table {
@@ -70,10 +70,11 @@
                 <a href="home.html">Home</a>
                 <a href="teams.php">Teams</a>
                 <a class="current" href="results.php">Resultaten</a>
+                <a href="box-shadow.html">Box-Shadow</a> <!--Haal dit weg-->
             </div>
             <div class="logos">
-                <img class="logo_atc" src="img/logo_atc.jpg">
-                <img class="logo_eredivisie" src="img/logo_eredivisie.jpg">
+                <img class="logo_atc" src="../img/logo_atc.jpg">
+                <img class="logo_eredivisie" src="../img/logo_eredivisie.jpg">
             </div>
         </header>
         <main>
