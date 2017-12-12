@@ -42,7 +42,7 @@
                 <a class="current" href="teams.php">Teams</a>
                 <a href="results.php">Resultaten</a>
                 <a href="cursor.html">Cursor</a>
-                <a href="box-shadow.html.html">Box Shadow</a>
+                <a href="box-shadow.html">Box Shadow</a>
             </div>
             <div class="logos">
                 <img class="logo_atc" src="../img/logo_atc.jpg">
