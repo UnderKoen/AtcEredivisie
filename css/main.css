@@ -31,8 +31,7 @@ section:last-of-type {
 }
 
 section .content {
-    padding-top: 0.83em;
-    padding-bottom: 0.83em;
+    padding: 0.83em 10px;
 }
 
 section h1 {

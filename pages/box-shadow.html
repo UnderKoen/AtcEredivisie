@@ -10,6 +10,77 @@
               rel="stylesheet">
         <link rel="icon" type="image/png" href="../img/logo_page.png">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <style>
+            input[type="color"] {
+                height: 18px;
+            }
+
+            .box {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                display: block;
+                margin: 20px auto auto;
+            }
+
+            .example {
+                padding-bottom: 50px !important;
+            }
+        </style>
+        <script>
+            var color = "black";
+            var h_afstand = "0px";
+            var v_afstand = "0px";
+            var vervaging = "0px";
+            var afstand = "0px";
+            var inset = "";
+
+            function change(t) {
+                box = document.getElementsByClassName("box")[0];
+                switch (t.placeholder) {
+                    case "color":
+                        color = t.value;
+                        break;
+                    case "h-afstand":
+                        if (t.value !== "") {
+                            h_afstand = t.value + "px";
+                        } else {
+                            h_afstand = "0px";
+                        }
+                        break;
+                    case "v-afstand":
+                        if (t.value !== "") {
+                            v_afstand = t.value + "px";
+                        } else {
+                            v_afstand = "0px";
+                        }
+                        break;
+                    case "vervaging":
+                        if (t.value !== "") {
+                            vervaging = t.value + "px";
+                        } else {
+                            vervaging = "0px";
+                        }
+                        break;
+                    case "verspreiding":
+                        if (t.value !== "") {
+                            afstand = t.value + "px";
+                        } else {
+                            afstand = "0px";
+                        }
+                        break;
+                    case "inset":
+                        if (t.checked) {
+                            inset = "inset";
+                        } else {
+                            inset = "";
+                        }
+                        break;
+                }
+                box.style = "box-shadow: " + color.toString() + " " + h_afstand.toString() + " " + v_afstand.toString()
+                    + " " + vervaging.toString() + " " + afstand.toString() + " " + inset.toString() + ";";
+            }
+        </script>
     </head>
     <body>
         <header class="top">
@@ -19,7 +90,7 @@
                 <a href="teams.php">Teams</a>
                 <a href="results.php">Resultaten</a>
                 <a href="cursor.html">Cursor</a>
-                <a href="box-shadow.html">Box Shadow</a>
+                <a href="box-shadow.html" class="current">Box Shadow</a>
             </div>
             <div class="logos">
                 <img class="logo_atc" src="../img/logo_atc.jpg">
@@ -32,9 +103,49 @@
                 <h1>Box Shadow</h1>
                 <div class="content">
                     <article>
+                        <h2>Waarvoor</h2>
+                        <div class="content">
+                            Een box shadow kan je gebruiken om aan te geven dat een element hoger zit dan een ander
+                            object bijvoorbeeld bij ons heeft het menu een shadow zo dat het lijkt dat het hoger zit dan
+                            de rest van de pagina. Je kan bij een shadow aangeven na welke kan hij staat, hoeveel hij
+                            vervaagt, hoever de shadow verspreid, de kleur en of de shadow aan de binnenkant of
+                            buitenkant zit.
+                        </div>
+                    </article>
+                    <article>
                         <h2>Hoe te gebruiken</h2>
                         <div class="content">
-                            Een box shadow kan je
+                            De shadow geef je in je css zo aan: <br>
+                            <span style="background-color: #BDBDBD; padding: 2px; margin: 5px 10px 0; display: inline-block">box-shadow:
+                                [kleur] [h-afstand] [v-afstand] [vervaging] [verspreiding] [inset];</span><br>
+                            <span style="background-color: #BDBDBD; margin-top: 10px; display: inline-block">[kleur]</span>
+                            geeft aan wat de kleur van de shadow moet zijn.<br>
+                            <span style="background-color: #BDBDBD; margin-top: 10px; display: inline-block">[h-afstand]</span>
+                            geeft aan hoever de shadow gaat horizontaal.<br>
+                            <span style="background-color: #BDBDBD; margin-top: 10px; display: inline-block">[v-afstand]</span>
+                            geeft aan hoever de shadow gaat verticaal.<br>
+                            <span style="background-color: #BDBDBD; margin-top: 10px; display: inline-block">[vervaging]</span>
+                            geeft aan hoeveel de shadow vervaagt.<br>
+                            <span style="background-color: #BDBDBD; margin-top: 10px; display: inline-block">[verspreiding]</span>
+                            geeft aan hoeveel de shadow verspreid.<br>
+                            <span style="background-color: #BDBDBD; margin-top: 10px; display: inline-block">[inset]</span>
+                            dit kan je gebruiken om te zorgen dat de shadow aan de binnenkant zit, als je het leeg laat
+                            is het aan de buitenkant.<br>
+                        </div>
+                    </article>
+                    <article>
+                        <h2>Probeer het zelf</h2>
+                        <div class="content example">
+                            <span style="background-color: #BDBDBD; padding: 2px; margin: 5px 10px 0; display: inline-block">box-shadow:
+                                <input type="color" placeholder="color" onchange="change(this)">
+                                <input type="number" placeholder="h-afstand" onchange="change(this)">
+                                <input type="number" placeholder="v-afstand" onchange="change(this)">
+                                <input type="number" placeholder="vervaging" onchange="change(this)">
+                                <input type="number" placeholder="verspreiding" onchange="change(this)">
+                                inset: <input type="checkbox" placeholder="inset" onchange="change(this)">;
+                            </span><br>
+                            <span class="box">
+                            </span>
                         </div>
                     </article>
                 </div>
