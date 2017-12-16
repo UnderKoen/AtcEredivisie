@@ -9,6 +9,11 @@ body {
     margin: 0;
 }
 
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
 main {
     min-height: calc(100vh - 63px);
 }
