@@ -30,7 +30,7 @@
                 position: absolute;
                 top: calc(0.83em + 5%);
                 margin-left: 30%;
-                width: calc(70% - 40px);
+                width: calc(70% - 48px);
             }
         </style>
     </head>
@@ -45,8 +45,8 @@
                 <a href="box-shadow.html">Box Shadow</a>
             </div>
             <div class="logos">
-                <img class="logo_atc" src="../img/logo_atc.jpg">
-                <img class="logo_eredivisie" src="../img/logo_eredivisie.jpg">
+                <img alt="img" src="../img/logo_atc.jpg">
+                <img alt="img" src="../img/logo_eredivisie.jpg">
             </div>
         </header>
         <main>

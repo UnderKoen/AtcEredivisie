@@ -39,7 +39,7 @@ section .content {
     padding: 0.83em 10px;
 }
 
-section h1 {
+section h1, section h2 {
     margin-bottom: auto;
     color: white;
     text-align: center;
@@ -56,16 +56,11 @@ section article {
 }
 
 section article h2 {
-    margin-bottom: auto;
-    color: white;
-    text-align: center;
-    padding: 10px;
     background-color: #AD1457;
 }
 
 /*Beginning list*/
 ul.list {
-    list-style: none;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -79,7 +74,6 @@ ul.list li {
     color: white;
     font-weight: bold;
     font-size: 14px;
-    vertical-align: middle;
     margin: auto 8px 8px auto;
 }
 
@@ -89,7 +83,6 @@ ul.list li:nth-child(2n) {
 
 ul.list li::before {
     content: url("../img/logo_list.jpg");
-    display: block;
     position: absolute;
     margin-left: -48px;
     border-right: solid white 8px;
@@ -101,15 +94,11 @@ ul.list li::before {
 }
 
 section ul.list li::before {
-    border-right-color: #E0E0E0;
-    border-bottom-color: #E0E0E0;
-    border-top-color: #E0E0E0;
+    border-color: #E0E0E0;
 }
 
 article ul.list li::before {
-    border-right-color: #EEEEEE;
-    border-bottom-color: #EEEEEE;
-    border-top-color: #EEEEEE;
+    border-color: #EEEEEE;
 }
 
 /*Ending list*/
@@ -126,14 +115,6 @@ article ul.list li::before {
     max-width: 50%;
     padding-left: 25%;
     padding-right: 25%;
-}
-
-.slideshow .popup-img img {
-    min-width: inherit;
-    width: inherit;
-    max-width: inherit;
-    padding-left: inherit;
-    padding-right: inherit;
 }
 
 .slideshow i {
@@ -161,28 +142,13 @@ article ul.list li::before {
     width: 100%;
 }
 
-.slideshow .items .item {
-    visibility: hidden;
+.slideshow .items .item:not(.active) {
     display: none;
-}
-
-.slideshow .items .item.active {
-    visibility: visible;
-    display: inherit;
 }
 
 /*Ending slideshow*/
 
 /*Beginning popup img*/
-.popup {
-    position: fixed;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
 .popup .close {
     top: 5vh;
     right: 10vw;
@@ -205,12 +171,10 @@ article ul.list li::before {
     width: 100%;
     height: 100%;
     display: grid;
-    z-index: 100;
+    z-index: 500;
 }
 
 .popup .popup-img img {
-    width: auto !important;
-    display: block !important;
     max-width: 70vw !important;
     max-height: 80vh !important;
     margin: auto !important;
@@ -223,28 +187,18 @@ article ul.list li::before {
 footer {
     margin-top: 25px;
     box-shadow: black 0 1px 25px;
-    height: 38px;
+    height: 18px;
     background-color: #78002e;
-}
-
-footer aside {
     color: white;
     padding: 10px 50px;
 }
 
-footer aside a {
-    color: white;
-    text-decoration: none;
-}
-
-footer aside.left {
+footer .left {
     float: left;
-    text-align: left;
 }
 
-footer aside.right {
+footer .right {
     float: right;
-    text-align: right;
 }
 
 /*Ending footer*/

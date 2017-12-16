@@ -74,8 +74,8 @@
                 <a href="box-shadow.html">Box Shadow</a>
             </div>
             <div class="logos">
-                <img class="logo_atc" src="../img/logo_atc.jpg">
-                <img class="logo_eredivisie" src="../img/logo_eredivisie.jpg">
+                <img alt="img" src="../img/logo_atc.jpg">
+                <img alt="img" src="../img/logo_eredivisie.jpg">
             </div>
         </header>
         <main>
@@ -160,10 +160,8 @@ $username = "u22301p18105_test";
 $password = "test123";
 $dbname = "u22301p18105_atcEredivisie";
 
-// Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
@@ -201,7 +199,6 @@ $result2 = $conn->query($sql2);
 
 $pos = 0;
 if ($result->num_rows > 0) {
-    // output data of each row
     while ($row = $result->fetch_assoc()) {
         $naam = $row["naam"];
         $pos = $pos + 1;
@@ -222,7 +219,6 @@ if ($result->num_rows > 0) {
 $round = 0;
 $i = 3;
 if ($result2->num_rows > 0) {
-    // output data of each row
     while ($row = $result2->fetch_assoc()) {
         $team1 = $row["team1naam"];
         $team1score = $row["uitslagTeam1"];
