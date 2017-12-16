@@ -59,7 +59,6 @@ function addGame(team1, team1score, team2score, team2, datum) {
     team2Node.innerHTML = team2;
     var datumNode = document.createElement("td");
     datumNode.innerHTML = datum;
-    datumNode.className = "number";
     tr.appendChild(team1Node);
     tr.appendChild(team2Node);
     tr.appendChild(team1scoreNode);

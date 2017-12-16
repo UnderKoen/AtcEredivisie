@@ -3,14 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <title>Atc Eredivisie - Results</title>
-        <script src="../js/main.js"></script>
         <script src="../js/results.js"></script>
         <link rel="stylesheet" type="text/css" href="../css/main.css">
         <link rel="stylesheet" type="text/css" href="../css/menu.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
               rel="stylesheet">
         <link rel="icon" type="image/png" href="../img/logo_page.png">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <style>
             table {
                 display: block;
@@ -26,7 +24,6 @@
             tbody td, tbody th {
                 padding: 5px;
                 border-bottom: #311B92 3px solid;
-                text-align: left;
             }
 
             tbody tr:first-child th {
@@ -41,6 +38,7 @@
                 background-color: #AD1457;
                 color: white;
                 padding: 10px;
+                height: 19px;
             }
 
             tbody th.number, tbody td.number {
@@ -128,18 +126,18 @@
                         <tbody>
                             <tr>
                                 <th>
-                                    <div>Team 1</div>
+                                    <div>Home</div>
                                 </th>
                                 <th>
-                                    <div>Team 2</div>
+                                    <div>Away</div>
                                 </th>
                                 <th class="number">
-                                    <div>Team 1 Score</div>
+                                    <div>Home Score</div>
                                 </th>
                                 <th class="number">
-                                    <div>Team 2 Score</div>
+                                    <div>Away Score</div>
                                 </th>
-                                <th class="number">
+                                <th>
                                     <div>Datum</div>
                                 </th>
                             </tr>

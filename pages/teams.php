@@ -30,7 +30,7 @@
                 position: absolute;
                 top: calc(0.83em + 5%);
                 margin-left: 30%;
-                width: calc(70% - 48px);
+                width: calc(70% - 52px);
             }
         </style>
     </head>
