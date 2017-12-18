@@ -103,13 +103,13 @@
                                     <div>Verloren</div>
                                 </th>
                                 <th class="number">
-                                    <div>Doelpunten+</div>
+                                    <div>Doel punten+</div>
                                 </th>
                                 <th class="number">
-                                    <div>Doelpunten-</div>
+                                    <div>Doel punten-</div>
                                 </th>
                                 <th class="number">
-                                    <div>DoelSaldo</div>
+                                    <div>Doel saldo</div>
                                 </th>
                                 <th class="number">
                                     <div>Punten</div>
