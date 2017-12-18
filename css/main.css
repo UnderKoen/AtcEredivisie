@@ -118,6 +118,7 @@ article ul.list li::before {
 }
 
 .slideshow i {
+    top: calc(50% - 16px);
     position: absolute;
     background-color: #BDBDBD;
     border-radius: 32px;
@@ -128,13 +129,12 @@ article ul.list li::before {
 }
 
 .slideshow .previous {
-    margin-left: calc(12.5% - 16px);
+    left: calc(12.5% - 16px);
     cursor: w-resize;
 }
 
 .slideshow .next {
-    margin-left: calc(87.5% - 16px);
-    margin-right: calc(12.5% - 16px);
+    right: calc(12.5% - 16px);
     cursor: e-resize;
 }
 
