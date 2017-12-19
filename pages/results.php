@@ -27,6 +27,7 @@
             }
 
             tbody tr:first-child th {
+                position: -webkit-sticky;
                 position: sticky;
                 top: 126px;
                 padding: 10px 0 0;
